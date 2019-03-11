@@ -1,4 +1,4 @@
-/// <reference path="typings/tsd.d.ts" />
+// <reference path="typings/tsd.d.ts" />
 (function () {
     let table = document.getElementById("test_table");
     let newtr = table.insertRow();
