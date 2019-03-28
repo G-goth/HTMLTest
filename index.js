@@ -2,26 +2,26 @@
 (function () {
     let table = document.getElementById("test_table");
     // 行を行末に追加
-    let row = table.insertRow(-1);
-    let row2 = table.insertRow(-1);
+    const rowsCount = 10;
+    let rowsArray = new Array();
+    for(let i = 0; i < rowsCount; ++i)
+    {
+        rowsArray[i] = table.insertRow(-1);
+    }
 
     // セルの挿入
-    let cell1 = row.insertCell(-1);
-    let cell2 = row.insertCell(-1);
-    let cell3 = row.insertCell(-1);
-
-    let cell4 = row2.insertCell(-1);
-    let cell5 = row2.insertCell(-1);
-    let cell6 = row2.insertCell(-1);
-    
-    // 行数取得
-    let row_len = table.rows.length;
- 
-    // セルの内容入力
-    cell1.innerHTML = "Test";
-    cell2.innerHTML = row_len + "-" + 1;
-    cell3.innerHTML = row_len + "-" + 2;
-    cell4.innerHTML = "Test";
-    cell5.innerHTML = row_len + "-" + 1;
-    cell6.innerHTML = row_len + "-" + 2;
+    let hoge = [];
+    for(let i = 0; i < rowsCount; ++i)
+    {
+        hoge[i] = [];
+        for(let j = 0; j < 3; ++j)
+        {
+            hoge[i][j] = rowsArray[i].insertCell(-1);
+            hoge[i][j].innerHTML = "Test" + i;
+            if(j == 1)
+            {
+                hoge[i][j].innerHTML = "Check";
+            }
+        }
+    }
 }());
