@@ -17,10 +17,14 @@
         for(let j = 0; j < 3; ++j)
         {
             hoge[i][j] = rowsArray[i].insertCell(-1);
-            hoge[i][j].innerHTML = "Test" + i;
+            hoge[i][j].innerHTML = '<img src="img1.PNG" height="160" width="120">';
             if(j == 1)
             {
-                hoge[i][j].innerHTML = "Check";
+                hoge[i][j].innerHTML = "Test" + i;
+            }
+            else if(j == 2)
+            {
+                hoge[i][j].innerHTML = "Test" + i;
             }
         }
     }
