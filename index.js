@@ -14,8 +14,11 @@
         hoge[i] = [];
         for (let j = 0; j < 3; ++j) {
             hoge[i][j] = rowsArray[i].insertCell(-1);
-            hoge[i][j].innerHTML = '<img src="img' + i + '.PNG" height="160" width="120">';
-            if(j == 1)
+            if(j == 0)
+            {
+                hoge[i][j].innerHTML = '<img src="img' + i + '.PNG" height="160" width="120">';
+            }
+            else if(j == 1)
             {
                 hoge[i][j].innerHTML = "Test" + i;
             }
