@@ -2,7 +2,7 @@
 (function () {
     let table = document.getElementById("test_table");
     // 行を行末に追加
-    const rowsCount = 6;
+    const rowsCount = 4;
     let rowsArray = new Array();
     for (let i = 0; i < rowsCount; ++i) {
         rowsArray[i] = table.insertRow(-1);
